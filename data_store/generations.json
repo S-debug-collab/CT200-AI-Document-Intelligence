@@ -1,0 +1,401 @@
+[
+  {
+    "selection_id": "77ec4dc5-a464-4e51-b091-d56a4ef4046a",
+    "document_id": "230cbc94-8d3b-4545-9976-6dd5372a2b24",
+    "status": "ok",
+    "prompt_model": "mock",
+    "attempts": 1,
+    "test_cases": [
+      {
+        "title": "Nominal path matches documented behavior",
+        "steps": "Exercise the feature described in this section under normal, in-range conditions.",
+        "expected_result": "Device behaves exactly as described in the section text, with no error condition raised.",
+        "risk_level": "low"
+      },
+      {
+        "title": "Section text is reflected in user-facing documentation/UI",
+        "steps": "Cross-check the on-device UI strings / user manual wording against this section's current text.",
+        "expected_result": "No contradiction between this section and the on-device behavior or other manual sections that reference it.",
+        "risk_level": "low"
+      },
+      {
+        "title": "Regression check for this section",
+        "steps": "Re-run prior passing test cases for this section after any firmware change.",
+        "expected_result": "All prior test cases for this section still pass.",
+        "risk_level": "low"
+      }
+    ],
+    "raw_responses": [
+      "{\"test_cases\": [{\"title\": \"Nominal path matches documented behavior\", \"steps\": \"Exercise the feature described in this section under normal, in-range conditions.\", \"expected_result\": \"Device behaves exactly as described in the section text, with no error condition raised.\", \"risk_level\": \"low\"}, {\"title\": \"Section text is reflected in user-facing documentation/UI\", \"steps\": \"Cross-check the on-device UI strings / user manual wording against this section's current text.\", \"expected_result\": \"No contradiction between this section and the on-device behavior or other manual sections that reference it.\", \"risk_level\": \"low\"}, {\"title\": \"Regression check for this section\", \"steps\": \"Re-run prior passing test cases for this section after any firmware change.\", \"expected_result\": \"All prior test cases for this section still pass.\", \"risk_level\": \"low\"}]}"
+    ],
+    "error": null,
+    "source_snapshot": [
+      {
+        "node_id": "230cbc94-8d3b-4545-9976-6dd5372a2b24:v3:sec4",
+        "logical_id": "738a6939-0974-4ff4-8d3e-a74f17498be8",
+        "version_id": "344e02cf-3007-4cde-bf20-1ca89a12925c",
+        "content_hash": "d2329fb2405e81cb44b11f7a56e23a5919337096d0c15b591f89f7ebb91f77f1",
+        "heading_text": "Alarms and Safety Behavior",
+        "excerpt": ""
+      }
+    ],
+    "id": "85285e15-564e-4c4d-8e02-7ec2a665d5da",
+    "created_at": "2026-07-16T17:21:37.830903+00:00"
+  },
+  {
+    "selection_id": "e23f3d96-8441-4f20-9b91-87cf45dc7e71",
+    "document_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a",
+    "status": "ok",
+    "prompt_model": "mock",
+    "attempts": 1,
+    "test_cases": [
+      {
+        "title": "Nominal path matches documented behavior",
+        "steps": "Exercise the feature described in this section under normal, in-range conditions.",
+        "expected_result": "Device behaves exactly as described in the section text, with no error condition raised.",
+        "risk_level": "low"
+      },
+      {
+        "title": "Section text is reflected in user-facing documentation/UI",
+        "steps": "Cross-check the on-device UI strings / user manual wording against this section's current text.",
+        "expected_result": "No contradiction between this section and the on-device behavior or other manual sections that reference it.",
+        "risk_level": "low"
+      },
+      {
+        "title": "Regression check for this section",
+        "steps": "Re-run prior passing test cases for this section after any firmware change.",
+        "expected_result": "All prior test cases for this section still pass.",
+        "risk_level": "low"
+      }
+    ],
+    "raw_responses": [
+      "{\"test_cases\": [{\"title\": \"Nominal path matches documented behavior\", \"steps\": \"Exercise the feature described in this section under normal, in-range conditions.\", \"expected_result\": \"Device behaves exactly as described in the section text, with no error condition raised.\", \"risk_level\": \"low\"}, {\"title\": \"Section text is reflected in user-facing documentation/UI\", \"steps\": \"Cross-check the on-device UI strings / user manual wording against this section's current text.\", \"expected_result\": \"No contradiction between this section and the on-device behavior or other manual sections that reference it.\", \"risk_level\": \"low\"}, {\"title\": \"Regression check for this section\", \"steps\": \"Re-run prior passing test cases for this section after any firmware change.\", \"expected_result\": \"All prior test cases for this section still pass.\", \"risk_level\": \"low\"}]}"
+    ],
+    "error": null,
+    "source_snapshot": [
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:sec4",
+        "logical_id": "f0159537-b33e-4189-944f-94809874808c",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "d2329fb2405e81cb44b11f7a56e23a5919337096d0c15b591f89f7ebb91f77f1",
+        "heading_text": "Alarms and Safety Behavior",
+        "excerpt": ""
+      }
+    ],
+    "id": "5cccf9a0-3159-469e-9722-5c93bb95426a",
+    "created_at": "2026-07-16T18:14:08.841513+00:00"
+  },
+  {
+    "selection_id": "e23f3d96-8441-4f20-9b91-87cf45dc7e71",
+    "document_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a",
+    "status": "ok",
+    "prompt_model": "mock",
+    "attempts": 1,
+    "test_cases": [
+      {
+        "title": "Nominal path matches documented behavior",
+        "steps": "Exercise the feature described in this section under normal, in-range conditions.",
+        "expected_result": "Device behaves exactly as described in the section text, with no error condition raised.",
+        "risk_level": "low"
+      },
+      {
+        "title": "Section text is reflected in user-facing documentation/UI",
+        "steps": "Cross-check the on-device UI strings / user manual wording against this section's current text.",
+        "expected_result": "No contradiction between this section and the on-device behavior or other manual sections that reference it.",
+        "risk_level": "low"
+      },
+      {
+        "title": "Regression check for this section",
+        "steps": "Re-run prior passing test cases for this section after any firmware change.",
+        "expected_result": "All prior test cases for this section still pass.",
+        "risk_level": "low"
+      }
+    ],
+    "raw_responses": [
+      "{\"test_cases\": [{\"title\": \"Nominal path matches documented behavior\", \"steps\": \"Exercise the feature described in this section under normal, in-range conditions.\", \"expected_result\": \"Device behaves exactly as described in the section text, with no error condition raised.\", \"risk_level\": \"low\"}, {\"title\": \"Section text is reflected in user-facing documentation/UI\", \"steps\": \"Cross-check the on-device UI strings / user manual wording against this section's current text.\", \"expected_result\": \"No contradiction between this section and the on-device behavior or other manual sections that reference it.\", \"risk_level\": \"low\"}, {\"title\": \"Regression check for this section\", \"steps\": \"Re-run prior passing test cases for this section after any firmware change.\", \"expected_result\": \"All prior test cases for this section still pass.\", \"risk_level\": \"low\"}]}"
+    ],
+    "error": null,
+    "source_snapshot": [
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:sec4",
+        "logical_id": "f0159537-b33e-4189-944f-94809874808c",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "d2329fb2405e81cb44b11f7a56e23a5919337096d0c15b591f89f7ebb91f77f1",
+        "heading_text": "Alarms and Safety Behavior",
+        "excerpt": ""
+      }
+    ],
+    "id": "da6fd913-c742-4a6c-8192-eb91ef1ed921",
+    "created_at": "2026-07-16T18:16:27.252527+00:00"
+  },
+  {
+    "selection_id": "e23f3d96-8441-4f20-9b91-87cf45dc7e71",
+    "document_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a",
+    "status": "ok",
+    "prompt_model": "mock",
+    "attempts": 1,
+    "test_cases": [
+      {
+        "title": "Nominal path matches documented behavior",
+        "steps": "Exercise the feature described in this section under normal, in-range conditions.",
+        "expected_result": "Device behaves exactly as described in the section text, with no error condition raised.",
+        "risk_level": "low"
+      },
+      {
+        "title": "Section text is reflected in user-facing documentation/UI",
+        "steps": "Cross-check the on-device UI strings / user manual wording against this section's current text.",
+        "expected_result": "No contradiction between this section and the on-device behavior or other manual sections that reference it.",
+        "risk_level": "low"
+      },
+      {
+        "title": "Regression check for this section",
+        "steps": "Re-run prior passing test cases for this section after any firmware change.",
+        "expected_result": "All prior test cases for this section still pass.",
+        "risk_level": "low"
+      }
+    ],
+    "raw_responses": [
+      "{\"test_cases\": [{\"title\": \"Nominal path matches documented behavior\", \"steps\": \"Exercise the feature described in this section under normal, in-range conditions.\", \"expected_result\": \"Device behaves exactly as described in the section text, with no error condition raised.\", \"risk_level\": \"low\"}, {\"title\": \"Section text is reflected in user-facing documentation/UI\", \"steps\": \"Cross-check the on-device UI strings / user manual wording against this section's current text.\", \"expected_result\": \"No contradiction between this section and the on-device behavior or other manual sections that reference it.\", \"risk_level\": \"low\"}, {\"title\": \"Regression check for this section\", \"steps\": \"Re-run prior passing test cases for this section after any firmware change.\", \"expected_result\": \"All prior test cases for this section still pass.\", \"risk_level\": \"low\"}]}"
+    ],
+    "error": null,
+    "source_snapshot": [
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:sec4",
+        "logical_id": "f0159537-b33e-4189-944f-94809874808c",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "d2329fb2405e81cb44b11f7a56e23a5919337096d0c15b591f89f7ebb91f77f1",
+        "heading_text": "Alarms and Safety Behavior",
+        "excerpt": ""
+      }
+    ],
+    "id": "d31a5191-2cf1-4723-821f-4b285cafd7eb",
+    "created_at": "2026-07-16T18:20:44.579340+00:00"
+  },
+  {
+    "selection_id": "e23f3d96-8441-4f20-9b91-87cf45dc7e71",
+    "document_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a",
+    "status": "ok",
+    "prompt_model": "llama-3.3-70b-versatile",
+    "attempts": 1,
+    "test_cases": [
+      {
+        "title": "High Blood Pressure Alarm",
+        "steps": "Take a measurement with a systolic value above 180 mmHg",
+        "expected_result": "The device sounds an alarm and displays 'High Blood Pressure' on the screen",
+        "risk_level": "high"
+      },
+      {
+        "title": "Low Blood Pressure Alarm",
+        "steps": "Take a measurement with a systolic value below 90 mmHg",
+        "expected_result": "The device sounds an alarm and displays 'Low Blood Pressure' on the screen",
+        "risk_level": "medium"
+      },
+      {
+        "title": "Irregular Heartbeat Alarm",
+        "steps": "Simulate an irregular heartbeat during a measurement",
+        "expected_result": "The device sounds an alarm and displays 'Irregular Heartbeat' on the screen",
+        "risk_level": "high"
+      },
+      {
+        "title": "Error Code for Incorrect Cuff Size",
+        "steps": "Take a measurement with a cuff size that is not within the recommended range (22-42 cm)",
+        "expected_result": "The device displays error code E03 and does not display a blood pressure reading",
+        "risk_level": "low"
+      }
+    ],
+    "raw_responses": [
+      "{\"test_cases\": [\n{\"title\": \"High Blood Pressure Alarm\", \"steps\": \"Take a measurement with a systolic value above 180 mmHg\", \"expected_result\": \"The device sounds an alarm and displays 'High Blood Pressure' on the screen\", \"risk_level\": \"high\"},\n{\"title\": \"Low Blood Pressure Alarm\", \"steps\": \"Take a measurement with a systolic value below 90 mmHg\", \"expected_result\": \"The device sounds an alarm and displays 'Low Blood Pressure' on the screen\", \"risk_level\": \"medium\"},\n{\"title\": \"Irregular Heartbeat Alarm\", \"steps\": \"Simulate an irregular heartbeat during a measurement\", \"expected_result\": \"The device sounds an alarm and displays 'Irregular Heartbeat' on the screen\", \"risk_level\": \"high\"},\n{\"title\": \"Error Code for Incorrect Cuff Size\", \"steps\": \"Take a measurement with a cuff size that is not within the recommended range (22-42 cm)\", \"expected_result\": \"The device displays error code E03 and does not display a blood pressure reading\", \"risk_level\": \"low\"}\n]}"
+    ],
+    "error": null,
+    "source_snapshot": [
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:sec4",
+        "logical_id": "f0159537-b33e-4189-944f-94809874808c",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "d2329fb2405e81cb44b11f7a56e23a5919337096d0c15b591f89f7ebb91f77f1",
+        "heading_text": "Alarms and Safety Behavior",
+        "excerpt": ""
+      }
+    ],
+    "id": "244d4cb9-43fa-41ca-bf94-11e2781d67db",
+    "created_at": "2026-07-16T18:23:01.720294+00:00"
+  },
+  {
+    "selection_id": "e23f3d96-8441-4f20-9b91-87cf45dc7e71",
+    "document_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a",
+    "status": "ok",
+    "prompt_model": "llama-3.3-70b-versatile",
+    "attempts": 1,
+    "test_cases": [
+      {
+        "title": "Validation of Alarms Presence",
+        "steps": "1. Power on the device. 2. Check the device's interface for any alarm indicators or menus.",
+        "expected_result": "The device displays an option or section related to alarms.",
+        "risk_level": "low"
+      },
+      {
+        "title": "Safety Behavior Documentation",
+        "steps": "1. Refer to the device's manual or documentation. 2. Search for the 'Alarms and Safety Behavior' section.",
+        "expected_result": "The manual contains information or a section titled 'Alarms and Safety Behavior'.",
+        "risk_level": "low"
+      },
+      {
+        "title": "Alarm and Safety Feature Accessibility",
+        "steps": "1. Access the device's settings or control panel. 2. Attempt to navigate to the alarms and safety behavior options.",
+        "expected_result": "The alarms and safety behavior options are accessible through the device's interface.",
+        "risk_level": "medium"
+      }
+    ],
+    "raw_responses": [
+      "Since the provided manual section is a title or heading without any specific details, the test cases will focus on validation of the presence and basic functionality of alarms and safety behavior. Here are some test cases based on the given information:\n\n```json\n{\n  \"test_cases\":[\n    {\n      \"title\":\"Validation of Alarms Presence\",\n      \"steps\":\"1. Power on the device. 2. Check the device's interface for any alarm indicators or menus.\",\n      \"expected_result\":\"The device displays an option or section related to alarms.\",\n      \"risk_level\":\"low\"\n    },\n    {\n      \"title\":\"Safety Behavior Documentation\",\n      \"steps\":\"1. Refer to the device's manual or documentation. 2. Search for the 'Alarms and Safety Behavior' section.\",\n      \"expected_result\":\"The manual contains information or a section titled 'Alarms and Safety Behavior'.\",\n      \"risk_level\":\"low\"\n    },\n    {\n      \"title\":\"Alarm and Safety Feature Accessibility\",\n      \"steps\":\"1. Access the device's settings or control panel. 2. Attempt to navigate to the alarms and safety behavior options.\",\n      \"expected_result\":\"The alarms and safety behavior options are accessible through the device's interface.\",\n      \"risk_level\":\"medium\"\n    }\n  ]\n}\n```"
+    ],
+    "error": null,
+    "source_snapshot": [
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:sec4",
+        "logical_id": "f0159537-b33e-4189-944f-94809874808c",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "d2329fb2405e81cb44b11f7a56e23a5919337096d0c15b591f89f7ebb91f77f1",
+        "heading_text": "Alarms and Safety Behavior",
+        "excerpt": ""
+      }
+    ],
+    "id": "7fbb8055-8977-42ae-a64c-211121a0ad34",
+    "created_at": "2026-07-16T18:25:01.641600+00:00"
+  },
+  {
+    "selection_id": "e23f3d96-8441-4f20-9b91-87cf45dc7e71",
+    "document_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a",
+    "status": "ok",
+    "prompt_model": "llama-3.3-70b-versatile",
+    "attempts": 1,
+    "test_cases": [
+      {
+        "title": "Overpressure Protection Test",
+        "steps": "1. Set cuff pressure to 299 mmHg. 2. Verify the device does not trigger the emergency deflation valve. 3. Increase cuff pressure to 300 mmHg for longer than 3 seconds.",
+        "expected_result": "The device triggers the emergency deflation valve, halting inflation and venting the cuff within 2 seconds.",
+        "risk_level": "high"
+      },
+      {
+        "title": "Error Code E3 Test",
+        "steps": "1. Simulate an overpressure condition. 2. Verify the device auto-deflates within 2 seconds.",
+        "expected_result": "The device auto-deflates within 2 seconds and displays E3.",
+        "risk_level": "high"
+      },
+      {
+        "title": "Audible Alarm Test for E3",
+        "steps": "1. Simulate an overpressure condition (E3). 2. Verify the device sounds an audible alarm.",
+        "expected_result": "The device sounds an audible alarm for E3, which cannot be silenced.",
+        "risk_level": "medium"
+      },
+      {
+        "title": "Error Code E1 Test",
+        "steps": "1. Simulate a cuff not connected or leak detected condition. 2. Verify the device aborts measurement and displays E1.",
+        "expected_result": "The device aborts measurement and displays E1.",
+        "risk_level": "medium"
+      },
+      {
+        "title": "Error Code E2 Test",
+        "steps": "1. Simulate a motion artifact detected during measurement condition. 2. Verify the device aborts measurement, displays E2, and prompts retry.",
+        "expected_result": "The device aborts measurement, displays E2, and prompts retry.",
+        "risk_level": "low"
+      }
+    ],
+    "raw_responses": [
+      "```json\n{\n  \"test_cases\": [\n    {\n      \"title\": \"Overpressure Protection Test\",\n      \"steps\": \"1. Set cuff pressure to 299 mmHg. 2. Verify the device does not trigger the emergency deflation valve. 3. Increase cuff pressure to 300 mmHg for longer than 3 seconds.\",\n      \"expected_result\": \"The device triggers the emergency deflation valve, halting inflation and venting the cuff within 2 seconds.\",\n      \"risk_level\": \"high\"\n    },\n    {\n      \"title\": \"Error Code E3 Test\",\n      \"steps\": \"1. Simulate an overpressure condition. 2. Verify the device auto-deflates within 2 seconds.\",\n      \"expected_result\": \"The device auto-deflates within 2 seconds and displays E3.\",\n      \"risk_level\": \"high\"\n    },\n    {\n      \"title\": \"Audible Alarm Test for E3\",\n      \"steps\": \"1. Simulate an overpressure condition (E3). 2. Verify the device sounds an audible alarm.\",\n      \"expected_result\": \"The device sounds an audible alarm for E3, which cannot be silenced.\",\n      \"risk_level\": \"medium\"\n    },\n    {\n      \"title\": \"Error Code E1 Test\",\n      \"steps\": \"1. Simulate a cuff not connected or leak detected condition. 2. Verify the device aborts measurement and displays E1.\",\n      \"expected_result\": \"The device aborts measurement and displays E1.\",\n      \"risk_level\": \"medium\"\n    },\n    {\n      \"title\": \"Error Code E2 Test\",\n      \"steps\": \"1. Simulate a motion artifact detected during measurement condition. 2. Verify the device aborts measurement, displays E2, and prompts retry.\",\n      \"expected_result\": \"The device aborts measurement, displays E2, and prompts retry.\",\n      \"risk_level\": \"low\"\n    }\n  ]\n}\n```"
+    ],
+    "error": null,
+    "source_snapshot": [
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:sec4",
+        "logical_id": "f0159537-b33e-4189-944f-94809874808c",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "d2329fb2405e81cb44b11f7a56e23a5919337096d0c15b591f89f7ebb91f77f1",
+        "heading_text": "Alarms and Safety Behavior",
+        "excerpt": ""
+      },
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:sec4.1",
+        "logical_id": "3569b644-ae2c-46b4-9c8d-b102d7c7bab7",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "27864795a69c5976df8d69a35203f86cdada22283e8783375834354ec974c2f3",
+        "heading_text": "Overpressure Protection",
+        "excerpt": ""
+      },
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:n37",
+        "logical_id": "393bdb44-6619-4c56-ad60-87a6cb84d20d",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "d7dc7486b37606a528feb83c839b251cc4140bc36a61d94b602f5da285abbecf",
+        "heading_text": null,
+        "excerpt": "If cuff pressure exceeds 299 mmHg at any point, or exceeds 300 mmHg for longer than 3 seconds due to sensor fault, the device immediately triggers an emergency deflation valve, halting inflation and v"
+      },
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:sec4.2",
+        "logical_id": "c862db6a-4100-495f-b1ca-168c13548020",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "b34a84c07373c8705684e263865ee1f33567f7f3aed4c391e47faed00bbcd089",
+        "heading_text": "Error Codes",
+        "excerpt": ""
+      },
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:tbl39",
+        "logical_id": "5962f16e-551b-4cba-8e4e-2940edff6eae",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "3861ebc398b9d7a48aa9c8f3004983c9a1350d41e1a6ba03d4c981270c6d904f",
+        "heading_text": null,
+        "excerpt": ""
+      },
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:tbl40",
+        "logical_id": "15d1ad37-f472-4b77-a5ae-cca4e14ac059",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "d48d0601af304a50e33564d302b6570cd189d9da0ed93c47464a140c5e5d07e9",
+        "heading_text": null,
+        "excerpt": ""
+      },
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:tbl41",
+        "logical_id": "99dc1910-a751-47ed-9d84-36a454da0ac2",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "1fa916c601eddc5434a2eda13ab9bfd39c5297369db8f5b3b1d58c30487b27d0",
+        "heading_text": null,
+        "excerpt": ""
+      },
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:tbl42",
+        "logical_id": "d79ee58b-6f71-4abe-95e2-4b730568150b",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "fc249f4f4414a20c6fefc92a11fcaf0dab0ca8f8803022c6d2429dfc0ac24ef8",
+        "heading_text": null,
+        "excerpt": ""
+      },
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:tbl43",
+        "logical_id": "1866d3cd-d201-4f15-acad-d0c01b6dd47e",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "f66ff98baf4f0fa511d075c2066c568b87a607ca36228dc0edaf8415a0e9fb53",
+        "heading_text": null,
+        "excerpt": ""
+      },
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:sec4.3",
+        "logical_id": "78c0c80d-abc3-4859-82a7-f8823d989bf0",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "56a96a493a5a058be777d34c1240a2949dbaf540f0189c7e69a74e4c3fe08602",
+        "heading_text": "Alarm Thresholds",
+        "excerpt": ""
+      },
+      {
+        "node_id": "1c779c37-9d2c-41fe-8d63-a02dc38ff24a:v2:n45",
+        "logical_id": "bf102aae-037b-4d02-b937-a0c70ca12a02",
+        "version_id": "d372090b-eb33-46d4-b4ed-baf34620a2d1",
+        "content_hash": "a98674852c88752a6eff4fd1cb498161e4346e74aa4ae9e46d33260c536a2434",
+        "heading_text": null,
+        "excerpt": "The device does not sound an audible alarm for elevated readings by default; audible alarms are limited to the E1-E5 error conditions above \u2010and are userconfigurable in the settings menu, except for E"
+      }
+    ],
+    "id": "aa2e6267-5d0c-415e-9408-24832910fa5f",
+    "created_at": "2026-07-17T03:10:25.311591+00:00"
+  }
+]
