@@ -1,37 +1,44 @@
-# Tri9T CT-200 Document Intelligence API
+# CT-200 Document Intelligence System
+
+AI Engineering Internship Assignment - Tri9T AI
 
 A FastAPI backend that ingests the CT-200 medical device manual, reconstructs its hierarchical structure, supports document versioning, generates QA test cases using an LLM, and detects stale traceability across document versions.
 
 ---
 
-## Features
+# Features
 
 - PDF ingestion and hierarchy reconstruction
+- OCR-based document extraction pipeline
 - Document versioning (v1 → v2)
+- Preservation of logical nodes across versions
 - Browse document sections and nodes
 - Search document content
 - Version-pinned selections
 - LLM-powered QA test case generation
+- Structured LLM output validation
 - Retrieval of generated test cases
-- Staleness detection for nodes and generated test cases
-- SQLite persistence
+- Node-level and generation-level staleness detection
+- SQLite persistence for document structure
 - MongoDB storage for generated outputs
 
 ---
 
-## Tech Stack
+# Tech Stack
 
 - FastAPI
 - SQLAlchemy
 - SQLite
 - MongoDB
 - Pydantic
-- PDFPlumber / OCR pipeline
 - Python
+- PDFPlumber / PDF parsing tools
+- OCR pipeline
+- LLM API integration
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```
 app/
@@ -46,44 +53,50 @@ app/
 └── main.py
 
 data/
+├── ct200_manual_v1.pdf
+└── ct200_manual_v2.pdf
+
 tests/
+
 README.md
 APPROACH.md
 requirements.txt
+.env.example
 ```
 
 ---
 
-## Installation
+# Installation
 
-Clone the repository
+Clone the repository:
 
 ```bash
 git clone <repository-url>
+
 cd <repository-folder>
 ```
 
-Create a virtual environment
+Create a virtual environment:
 
 ```bash
 python -m venv venv
 ```
 
-Activate the environment
+Activate the environment:
 
-### Windows
+## Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-### Linux / macOS
+## Linux / macOS
 
 ```bash
 source venv/bin/activate
 ```
 
-Install dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -91,9 +104,9 @@ pip install -r requirements.txt
 
 ---
 
-## Environment Variables
+# Environment Variables
 
-Create a `.env` file.
+Create a `.env` file using `.env.example`.
 
 Example:
 
@@ -109,29 +122,29 @@ GEMINI_API_KEY=YOUR_API_KEY
 
 ---
 
-## Running the Application
+# Running the Application
 
-Start the server
+Start the FastAPI server:
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
-API Documentation
+API Documentation:
 
-Swagger UI
+Swagger UI:
 
 ```
 http://127.0.0.1:8000/docs
 ```
 
-ReDoc
+ReDoc:
 
 ```
 http://127.0.0.1:8000/redoc
 ```
 
-Health Check
+Health Check:
 
 ```
 GET /health
@@ -139,150 +152,314 @@ GET /health
 
 ---
 
-## Testing the Application
+# End-to-End Demo Flow
 
-### 1. Ingest Version 1
+## 1. Ingest Document Version 1
 
-Use
+Upload the original CT-200 manual:
 
 ```
 POST /ingest
 ```
 
-Upload
+Input:
 
 ```
 data/ct200_manual_v1.pdf
 ```
 
----
+The system:
 
-### 2. Ingest Version 2
-
-Upload
-
-```
-data/ct200_manual_v2.pdf
-```
-
-This creates a new version while preserving Version 1.
+- Extracts document content
+- Builds hierarchy
+- Stores nodes
+- Generates content hashes
+- Creates document version 1
 
 ---
 
-### 3. Browse Sections
+## 2. Browse Document Structure
+
+Retrieve sections:
 
 ```
 GET /documents/{document_id}/sections
 ```
 
----
-
-### 4. Get Node Details
+Retrieve a specific node:
 
 ```
 GET /nodes/{node_id}
 ```
 
-Returns
+Returns:
 
 - Heading
+- Section level
+- Parent relationship
 - Body text
-- Children
+- Child nodes
 - Content hash
-- Full reconstructed text
 
 ---
 
-### 5. Search Document
+## 3. Search Document
 
 ```
-GET /documents/{document_id}/search?q=...
+GET /documents/{document_id}/search?q=<keyword>
 ```
+
+Searches across:
+
+- Section headings
+- Extracted document text
 
 ---
 
-### 6. Check Node Staleness
-
-```
-GET /nodes/{node_id}/staleness
-```
-
----
-
-### 7. Create Selection
+## 4. Create Version-Pinned Selection
 
 ```
 POST /selections
 ```
 
-Selections are version-pinned and always reference the exact document version used during creation.
+Selections store:
+
+- Selected node IDs
+- Document version
+- Exact source content reference
+
+This ensures previous selections continue pointing to the original document version.
 
 ---
 
-### 8. Generate QA Test Cases
+## 5. Generate QA Test Cases
 
 ```
 POST /generate
 ```
 
-Generates QA test cases from the selected document sections.
+The selected document content is sent to an LLM.
+
+Generated output contains:
+
+- Test case title
+- Execution steps
+- Expected result
+
+LLM responses are validated using structured schemas.
+
+Invalid responses are retried and rejected if validation continues failing.
 
 ---
 
-### 9. Retrieve Generated Test Cases
+## 6. Ingest Document Version 2
+
+Upload:
 
 ```
-GET /retrieve/by-selection/{selection_id}
+data/ct200_manual_v2.pdf
 ```
 
-or
+The system:
 
-```
-GET /retrieve/by-node/{node_id}
-```
+- Creates a new document version
+- Preserves version 1
+- Matches unchanged logical nodes
+- Detects modified sections
 
 ---
 
-### 10. Check Generation Staleness
+## 7. Detect Changes and Staleness
+
+Node changes:
+
+```
+GET /nodes/{node_id}/staleness
+```
+
+Generated test case staleness:
 
 ```
 GET /retrieve/{generation_id}/staleness
 ```
 
-Determines whether previously generated test cases are still valid after document updates.
+The system compares:
+
+```
+Original content hash
+        |
+        |
+Current document content hash
+```
+
+If they differ, the generated QA test case is marked as potentially stale.
 
 ---
 
-## API Endpoints
+# API Endpoints
 
 | Method | Endpoint | Description |
-|---------|----------|-------------|
-| POST | `/ingest` | Ingest PDF |
+|---|---|---|
+| POST | `/ingest` | Ingest PDF document |
 | GET | `/documents/{document_id}/sections` | List top-level sections |
-| GET | `/nodes/{node_id}` | Get node details |
+| GET | `/nodes/{node_id}` | Retrieve node details |
 | GET | `/documents/{document_id}/search` | Search document |
 | GET | `/nodes/{node_id}/staleness` | Check node changes |
-| POST | `/selections` | Create selection |
-| GET | `/selections/{selection_id}` | Get selection |
+| POST | `/selections` | Create version-pinned selection |
+| GET | `/selections/{selection_id}` | Retrieve selection |
 | POST | `/generate` | Generate QA test cases |
-| GET | `/retrieve/by-selection/{selection_id}` | Retrieve by selection |
-| GET | `/retrieve/by-node/{node_id}` | Retrieve by node |
+| GET | `/retrieve/by-selection/{selection_id}` | Retrieve generated tests |
+| GET | `/retrieve/by-node/{node_id}` | Retrieve tests by node |
 | GET | `/retrieve/by-logical/{logical_id}` | Retrieve by logical node |
-| GET | `/retrieve/{generation_id}/staleness` | Generation staleness |
+| GET | `/retrieve/{generation_id}/staleness` | Check generation staleness |
 | GET | `/health` | Health check |
 
 ---
 
-## Notes
+# Key Design Decisions
 
-- The system preserves document hierarchy during parsing.
-- Every node stores a content hash used for change detection.
-- Selections remain tied to the exact document version they were created from.
-- Generated test cases are linked to the original document content to support traceability.
-- Staleness detection identifies whether document updates affect previously generated QA test cases.
+## PDF Extraction Approach
+
+The system uses PDF parsing combined with OCR because engineering documents may contain:
+
+- Machine-readable text
+- Scanned pages
+- Tables
+- Irregular formatting
+
+The goal is to preserve document structure rather than only extracting plain text.
 
 ---
 
-## Documentation
+## Hierarchy Reconstruction
 
-Additional implementation details, design decisions, parser strategy, version matching, and engineering decisions are documented in **APPROACH.md**.
+The parser reconstructs:
+
+```
+Document
+ |
+ ├── Section
+ |
+ ├── Subsection
+ |
+ └── Paragraph
+```
+
+Each node stores:
+
+- Node ID
+- Heading
+- Level
+- Parent ID
+- Body text
+- Content hash
+
+---
+
+## Version Matching Strategy
+
+Document versions are compared using:
+
+- Section title similarity
+- Parent-child structure
+- Content hash comparison
+
+Unchanged nodes are linked across versions.
+
+Modified content is flagged for traceability impact analysis.
+
+---
+
+## LLM Generation Strategy
+
+The LLM is instructed to return structured QA test cases.
+
+Output validation is performed using Pydantic models.
+
+If malformed output is received:
+
+1. Retry generation
+2. Validate response
+3. Store failure information if retries fail
+
+---
+
+## Staleness Detection Strategy
+
+Every generated QA test case stores:
+
+- Source node IDs
+- Document version
+- Original content hashes
+
+During retrieval, hashes are compared with the latest version.
+
+If source requirements changed, the test cases are marked stale.
+
+---
+
+# Testing
+
+Run:
+
+```bash
+pytest
+```
+
+Test coverage includes:
+
+- PDF hierarchy extraction
+- Parent-child relationship validation
+- Duplicate heading handling
+- Document version matching
+- Modified content detection
+- Staleness detection
+
+---
+
+# Decision Log
+
+## 1. What part can silently give wrong results?
+
+The hierarchy reconstruction process is the most likely to silently produce incorrect results because wrong parent-child relationships can still look valid.
+
+Detection methods:
+
+- Manual PDF comparison
+- Validation scripts
+- Unit tests for hierarchy cases
+
+---
+
+## 2. Where was simplicity chosen over correctness?
+
+The version matching approach uses structural similarity and hashing instead of a full semantic document understanding model.
+
+A more advanced embedding-based matcher could improve handling of heavily rewritten sections.
+
+---
+
+## 3. Unsupported input case
+
+Very poor-quality scanned pages or handwritten annotations may not be extracted correctly.
+
+The system exposes extraction limitations instead of silently generating incorrect document structures.
+
+---
+
+# Documentation
+
+Additional details about:
+
+- Parser implementation
+- Hierarchy reconstruction
+- Version matching strategy
+- LLM prompt design
+- Validation strategy
+- Engineering decisions
+
+are available in:
+
+```
+APPROACH.md
+```
